@@ -64,7 +64,7 @@ To get the right URL you can use this simple line of code:
 
 ```ruby
 ZohoHub::Auth.auth_url
-# => "https://accounts.zoho.eu/oauth/v2/auth?access_type=offline&client_id=&redirect_uri=&response_type=code&scope=ZohoCRM.modules.custom.all,ZohoCRM.settings.all,ZohoCRM.modules.contacts.all,ZohoCRM.modules.all"
+# => "https://accounts.zoho.com/oauth/v2/auth?access_type=offline&client_id=&redirect_uri=&response_type=code&scope=ZohoCRM.modules.custom.all,ZohoCRM.settings.all,ZohoCRM.modules.contacts.all,ZohoCRM.modules.all"
 ```
 
 If you request this generated URL you should see a screen like this one, where you have to click on "Accept":
@@ -85,7 +85,7 @@ To get the URL for a different scope you can provide a `scope` argument:
 
 ```ruby
 ZohoHub::Auth.auth_url(scope: ['ZohoCRM.modules.custom.all', 'ZohoCRM.modules.all'])
-# => "https://accounts.zoho.eu/oauth/v2/auth?access_type=offline&client_id=&redirect_uri=&response_type=code&scope=ZohoCRM.modules.custom.all,ZohoCRM.modules.all"
+# => "https://accounts.zoho.com/oauth/v2/auth?access_type=offline&client_id=&redirect_uri=&response_type=code&scope=ZohoCRM.modules.custom.all,ZohoCRM.modules.all"
 ```
 
 #### 2.1 Offline access
@@ -104,7 +104,7 @@ You can force "online" access by using `#auth_url` with a `access_type` argument
 
 ```ruby
 ZohoHub::Auth.auth_url(access_type: 'online')
-# => "https://accounts.zoho.eu/oauth/v2/auth?access_type=online&client_id=&redirect_uri=&response_type=code&scope=ZohoCRM.modules.custom.all,ZohoCRM.settings.all,ZohoCRM.modules.contacts.all,ZohoCRM.modules.all"
+# => "https://accounts.zoho.com/oauth/v2/auth?access_type=online&client_id=&redirect_uri=&response_type=code&scope=ZohoCRM.modules.custom.all,ZohoCRM.settings.all,ZohoCRM.modules.contacts.all,ZohoCRM.modules.all"
 ```
 
 ## 3. Generate Access Token
